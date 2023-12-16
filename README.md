@@ -1,12 +1,12 @@
-# 云开发 quickstart
+# Cloud Development Quickstart
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+This is a quick start guide to cloud development, which demonstrates how to get started with the three basic capabilities of cloud development:
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+- Database: a JSON document database that can be manipulated in the front-end of the applet as well as read and written in the cloud function.
+- File storage: upload/download cloud files directly in the applet front-end, manage them visually in the cloud development console
+- Cloud function: code running in the cloud, WeChat private protocol natural authentication, developers only need to write business logic code
 
-## 参考文档
+## Reference Document
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+- [Cloud Development Documentation](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
