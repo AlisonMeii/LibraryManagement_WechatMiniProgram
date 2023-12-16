@@ -1,0 +1,54 @@
+<!--pages/shezhi/shezhi.wxml-->
+<view class="list">
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{true?'card-menu margin-top':''}}">
+
+      <view class="cu-bar bg-white solid-bottom cu-item {{menuArrow?'arrow':''}}">
+			<view class="action">
+				<text class="cuIcon-titles text-blue"></text> 设置
+			</view>		
+    </view>
+    <view class="cu-item {{true?'arrow':''}}">
+      <view class="content " bindtap="showModal" data-target="menuModal">
+        <text class="cuIcon-clothesfill text-blue"></text>
+        <text class="text-grey">设置样式</text>
+      </view>
+    </view>
+		<view class="cu-item {{true?'arrow':''}}">
+      <view class="content">
+        <text class="cuIcon-circlefill text-grey"></text>
+        <text class="text-grey">意见留言板</text>
+      </view>
+    </view>
+    <view class="cu-item {{true?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">更改登录信息</text>
+      </navigator>
+    </view>
+
+    <view class="cu-item {{true?'arrow':''}}">
+      <view class="content">
+        <text class="cuIcon-warn text-green"></text>
+        <text class="text-grey">反馈问题</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">使用时遇到问题请联系我们！</text>
+      </view>
+    </view>
+    <view class="cu-item {{true?'arrow':''}}">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-tagfill text-red margin-right-xs"></text>标签
+				</view>
+        <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> 选择感兴趣的内容可以更好的推荐图书哟
+				</view>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">计算机</view>
+        <view class="cu-tag round bg-olive light">单片机</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+  </view>
+</view>

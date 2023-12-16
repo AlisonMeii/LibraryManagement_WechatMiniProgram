@@ -1,0 +1,132 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/input/input",
+          "pathName": "pages/input/input",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/input/index",
+          "pathName": "pages/input/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setup/setup",
+          "pathName": "pages/setup/setup",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/firstPage/firstPage",
+          "pathName": "pages/firstPage/firstPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/self/self",
+          "pathName": "pages/self/self",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wiper/wiper",
+          "pathName": "pages/wiper/wiper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shezhi/shezhi",
+          "pathName": "pages/shezhi/shezhi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/getSeat/getSeat",
+          "pathName": "pages/getSeat/getSeat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/picture/picture",
+          "pathName": "pages/picture/picture",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/calinder/calinder",
+          "pathName": "pages/calinder/calinder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sworder/sworder",
+          "pathName": "pages/sworder/sworder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/changeInf/changeInf",
+          "pathName": "pages/changeInf/changeInf",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/change/change",
+          "pathName": "pages/change/change",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/try/try",
+          "pathName": "pages/try/try",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!--pages/mine/mine.wxml-->
+<view class="box">
+	<view class="cu-bar tabbar  shadow foot">
+		<view class="action {{selected == 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+			<view class="cuIcon-discover"></view> 首页
+		</view>
+		<view class="action add-action {{selected == 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
+			<button class="cu-btn cuIcon-friendadd bg-cyan"></button>添加
+		</view>
+		<view class="action {{selected == 2 ? 'active' : 'default'}}" data-index="2" bindtap="switchTab">
+			<view class="cuIcon-my">
+			</view>
+			我的
+		</view>
+	</view>
+</view>
+
+<!-- 个人信息展示 -->
+<view class="container">
+	<!-- 个人信息展示 -->
+	<view class="PersonInfoContainer">
+		<image  class="avatarurl" src="{{ avatarUrl}}"></image>
+		<text class="nickname">hey，{{nickName}}</text>	
+		<text class="realname">{{realName}}</text>	
+		<text class="major">{{major}}</text>
+		<text class="studentID">{{studentID}}</text>
+	</view>
+<!-- 分割线 -->
+<view class="view_fengexian">
+			<view ></view>
+</view>
+	<!-- 预约记录 -->
+	<view class ="basictext" bindtap="changeToRecord"> 
+		<image class="basicimage1" src="../img/record.png"  style="width: 86rpx; height: 92rpx;"></image>
+		<text class="textrecord1" >预约记录</text>
+	</view>
+		<!-- 分割线 -->
+		<view class="divLine1"></view>
+	<!-- 信息修改 -->
+		<view class ="basictext" bindtap="changeInfo"> 
+			<image class="basicimage2" src="../img/revise.png" style="width: 86rpx; height: 86rpx;"></image>
+			<text class="textrecord2" >信息修改</text>
+		</view>
+		<!-- 分割线 -->
+		<view class="divLine2"></view>
+		<!-- 个人足迹 -->
+		<view class ="basictext" > 
+			<image class="basicimage3" src="../img/track.png" style="width: 76rpx; height: 70rpx;" ></image>
+			<text class="textrecord3" >个人足迹</text>
+		</view>
+</view>
+<!-- 入馆信息 -->
+<view class="librarCome">
+	<view class="cu-bar bg-white solid-bottom">
+		<view class="action">
+			<text class="cuIcon-titles text-blue"></text> 入馆信息
+		</view>
+	</view>
+</view>
+<!-- 入馆信息 最近入馆时间 -->
+<view class="timeToCome">
+	<image class= "intotime" src="../img/studytime.png" style="width: 232rpx; height: 219rpx; "></image>
+	<text class="comeText">最近入馆时间</text>
+	<text class="inTime">{{time}}</text>
+	<text class="inDate">{{date}}</text>
+</view>
+<view class="timeToStay">
+	<image class= "staytime" src="../img/long.png" style="opacity:{{0.8}} "></image>
+	<text class="stayTimeText">累计在馆时长</text>
+	<text class="allInTime">{{allTime}}</text>
+	<text class="allTimeHours">Hours</text>
+</view>
+<view class="borrowBook">
+	<image class= "borrowBooks" src="../img/rebook.png" style="opacity:{{0.9}}  "></image>
+	<text class="bookBorrowText">累计借阅书籍</text>
+	<text class="allBOOK">0</text>
+	<text class="allBOOKBen">本</text>
+</view>
+
+<!-- 背景 -->
+<image class="pic" src="../img/toppic.png" ></image>
+
+<!-- 设置 -->
+<view class="shezhi" bindtap="toOtherPage">
+	<view class="cu-bar bg-white solid-bottom">
+			<view class="action">
+				<text class="cuIcon-titles text-blue"></text> 设置
+			</view>		
+    </view>
+</view>

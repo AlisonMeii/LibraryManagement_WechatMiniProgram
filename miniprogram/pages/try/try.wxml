@@ -1,0 +1,16 @@
+<view class="page">  
+   <!-- 时间段 -->  
+    <view class="picker_group">  
+      <picker mode="time" value="{{time}}" start="{{date}}" end="10:00" bindchange="bindDateChange">  
+        <view class="picker">  
+          {{date}}  
+        </view>  
+      </picker>  
+      至  
+      <picker mode="time" value="{{time}}" start="{{date2}}" end="10:00" bindchange="bindDateChange2">  
+        <view class="picker">  
+          {{date2}}  
+        </view>  
+      </picker>        
+    </view>  
+  </view>  

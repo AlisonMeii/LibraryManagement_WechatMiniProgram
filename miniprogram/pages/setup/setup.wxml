@@ -1,0 +1,42 @@
+<!--pages/setup/setup.wxml-->
+
+<!-- 输入学号 -->
+<view class="view-contain-ti">
+  <input class="input1" bindinput="getID" placeholder="     学号ID" placeholder-class="placehoder-Input"> 
+  </input>
+  
+</view>
+<image class="image" src='../img/ID.png' style="position:absolute;width: 65rpx; height: 70rpx;"></image>
+
+<!-- 输入密码 -->
+<view class="view-contain-ti-2">
+    <input class="input1" password="true" bindinput="getPassword" placeholder="  密码Password" placeholder-class="placehoder-Input" ></input>
+</view>
+<image class="image-password" src='../img/password.png' style="position:absolute;width: 65rpx; height: 65rpx;"></image>
+
+<!-- 选择框 -->
+<checkbox-group class="checkBox-area" bindchange="checkboxChange">
+    <block wx:for="{{checkData}}">
+      <checkbox value='{{item.name}}' checked="{{item.status}}">{{item.name}}</checkbox>
+      <text class="knowAbout">我已阅读并知悉</text>
+  <!-- 点击触发事件-->
+  <text class="notice" bindtap='showRule' > 《邮图有约用户须知》</text>
+    </block>
+  </checkbox-group>
+
+
+<!-- 弹出层 -->
+<view class="bg" >
+  <view class="poupt {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+    <view class="intpok">《邮图有约用户须知》</view>
+    <view class="textinpot">提醒：默认密码为北邮vpn密码</view>
+    <view class="ttexk">
+      <view class="ttexttwo" bindtap='hideRule'>取消</view>
+      <view class="ttextone" bindtap='okk'>确定</view>
+    </view>
+  </view>
+</view>
+
+<!--登录按钮sign in-->
+<button class="Signinbutton" bindtap="signIn" style="position: relative; left: -1rpx; top: -54rpx" >sign in</button>  
+ 

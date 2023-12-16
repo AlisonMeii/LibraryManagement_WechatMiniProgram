@@ -1,0 +1,414 @@
+/* pages/getSeat/getSeat.wxss */
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+page{
+  background: white;
+}
+.background {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+}
+.gray{
+  width:200rpx;
+  height: 380rpx;
+  background-color: rgb(240, 239, 239);
+  margin-top:239rpx;
+}
+.container{
+  /* position:fixed;  */
+  position: absolute;
+  height: 370rpx;
+  width: 700rpx;
+  border-radius: 100rpx;
+  box-shadow: 5rpx 5rpx 5rpx gray;
+  margin-top: 210rpx;
+  margin-left: 20rpx;
+  background: white;
+}
+.VerticalNav.nav {
+  width: 200rpx;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(240, 239, 239);
+  margin: 0;
+  border: none;
+  height: 100rpx;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color:white;
+  
+}
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 30rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color:white;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+.VerticalBox{
+  display: flex;
+  /* margin-top:90rpx; */
+  /* position: fixed; */
+  
+}
+.VerticalMain{
+  background-color: white;
+}
+.libName{
+  position: absolute;
+  font-size: 33rpx;
+  font-weight: 550;
+  margin-top: -340rpx;
+  margin-left: -40rpx;
+}
+.usePre{
+  position: absolute;
+  font-size: 30rpx;
+  margin-top: -295rpx;
+  margin-left: -40rpx;
+}
+.haveThings{
+  position: absolute;
+  font-size: 30rpx;
+  margin-top: -256rpx;
+  margin-left: -40rpx;
+}
+.freeSeat{
+  position: absolute;
+  font-size: 30rpx;
+  margin-top: -220rpx;
+  margin-left: -40rpx;
+}
+.list{
+  position:absolute;
+  border-radius: 30rpx;
+  background: #99CCFF;
+  width:370rpx;
+  height:90rpx;
+  margin-top: 190rpx;
+  margin-left: 230rpx;
+}
+.listImage{
+  width: 80rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+}
+.listText{
+  position:absolute;
+  color: white;
+  font-size: 35rpx;
+  margin-top: -65rpx;
+  margin-left: 120rpx;
+}
+.recommend{
+  position:absolute;
+  border-radius: 20rpx;
+  background: #6699CC;
+  width:370rpx;
+  height:50rpx;
+  margin-top: 290rpx;
+  margin-left: 230rpx;
+}
+.recommendText{
+  position:absolute;
+  color: white;
+  font-size: 25rpx;
+  top: 10rpx;
+  left: 20rpx;
+}
+
+.seatContain{
+  position: absolute;
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+  /* background: rgb(195, 227, 248); */
+  margin-left: 25rpx;
+  border:3rpx solid rgb(195, 227, 248);
+}
+.seat{
+  position: absolute;
+  width: 470rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+  background: rgb(211, 237, 255);
+  margin-left: 12rpx;
+  margin-top: 12rpx;
+}
+.seatText{
+  position: absolute;
+  color:#6699CC;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 145rpx;
+  margin-top: 50rpx;
+}
+.now{
+  position: absolute;
+  width: 130rpx;
+  height: 80rpx;
+  border-radius: 35rpx;
+  background: rgb(214, 255, 246);
+  margin-left: 12rpx;
+  margin-top: 170rpx;
+}
+.nowText{
+  position: absolute;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: rgb(68, 109, 110);
+  margin-left: 25rpx;
+  margin-top: 12rpx;
+}
+.useageText{
+  position: absolute;
+  margin-left: 160rpx;
+  margin-top: 150rpx;
+}
+.useageText2{
+  position: absolute;
+  margin-left: 320rpx;
+  margin-top: 145rpx;
+  font-size: 40rpx;
+  color:#6699CC ;
+}
+.bookOnText{
+  position: absolute;
+  margin-left: 160rpx;
+  margin-top: 195rpx;
+}
+.bookOnText2{
+  position: absolute;
+  margin-left: 320rpx;
+  margin-top: 190rpx;
+  font-size: 40rpx;
+  color:#6699CC ;
+}
+.freeText{
+  position: absolute;
+  margin-left: 160rpx;
+  margin-top: 240rpx;
+}
+.freeText2{
+  position: absolute;
+  margin-left: 350rpx;
+  margin-top: 235rpx;
+  font-size: 40rpx;
+  color:#6699CC ;
+}
+.where{
+  position: absolute;
+  margin-top: 300rpx;
+}
+.calenderContainer{
+  position: absolute;
+  margin-top: 380rpx;
+  background: rgb(234, 253, 253);
+  width: 551rpx;
+  height: 70rpx;
+}
+.calenderChoose{
+  margin-top: -40rpx;
+  margin-left: 220rpx;
+}
+.calenderImage{
+  width: 40rpx;
+  height: 45rpx;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+.timeContainer{
+  position: absolute;
+  margin-top: 449rpx;
+  background: rgb(234, 244, 253);
+  width: 551rpx;
+  height: 70rpx;
+}
+.timeImage{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 15rpx;
+  margin-left: 50rpx;
+}
+.lightImage{
+  position: absolute;
+  margin-top: 530rpx;
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.lightText{
+  position: absolute;
+  margin-top: 540rpx;
+  margin-left: 80rpx;
+}
+.scoreImage{
+  position: absolute;
+  margin-top: 590rpx;
+  margin-left: 20rpx;
+  width: 40rpx;
+  height: 35rpx;
+}
+.scoreText{
+  position: absolute;
+  margin-top: 590rpx;
+  margin-left: 80rpx;
+}
+
+/* 小组件 */
+/* 日历 */ 
+.canlendarBgView {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99999;
+  position:fixed; 
+  bottom:0;
+  background: #ffffff;
+  text-align: center;
+  border-top:1rpx solid gainsboro;
+}
+ 
+.canlendarView {
+  color: #6699CC;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.canlendarTopView {
+  height: 80rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.leftBgView {
+  text-align: right;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+ 
+.leftView {
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.centerView {
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.rightBgView {
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+ 
+.rightView {
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.weekBgView {
+  height: 50rpx;
+  line-height: 50rpx;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.weekView {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 28rpx;
+}
+ 
+.dateBgView {
+  height: 500rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+ 
+.dateEmptyView {
+  width: 107.1428571429rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.dateView {
+  width: 107.1428571429rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.datesView {
+  width: 60rpx;
+  height: 60rpx;
+  color: #6699CC;
+  font-size: 26rpx;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.dateSelectView {
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  top: 0;
+  color: #fff;
+  background-color: #99CCFF;
+}
+.makeSure{
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.isRuleShow{
+  display: block;
+ }
+ .isRuleHide{
+  display: none;
+ }
+ .showText{
+   position: absolute;
+   margin-top:-00;
+ }

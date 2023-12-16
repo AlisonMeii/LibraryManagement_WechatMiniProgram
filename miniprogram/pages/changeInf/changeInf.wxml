@@ -1,0 +1,34 @@
+<!--pages/changeInf/changeInf.wxml-->
+<image  class="avatarurl" bindtap='changeHead' src="{{ avatarUrl}}"></image>
+<view class="container1">
+<!-- 分割线 -->
+<view class="cut1"></view>
+
+<text class="nickName" >昵称:</text>
+<input class="naickNameText" bindinput="getID" placeholder="{{nickName}}" ></input>
+
+<!-- 分割线 -->
+<view class="cut2"></view>
+
+<text class="schoolName">所在校区:</text>
+<input class="schoolNameText" bindinput="getSchool" placeholder="{{school}}" ></input>
+
+<text class="callName">默认联系方式:</text>
+<input class="callNameText" bindinput="getCall" placeholder="{{call}}" ></input>
+</view>
+<view class="refreshContain" bindtap="save">
+  <text class="refreshText">确定</text>
+</view>
+
+<view class="container2">
+<text class="refresh">教务系统更新</text>
+<text class="IDName">学号:</text>
+<input class="IDNameText" bindinput="getStudentID"></input>
+<!-- 分割线 -->
+<view class="cut3"></view>
+<text class="passwordName">密码:</text>
+<input class="passwordNameText" bindinput="getPassword" password="true" ></input>
+</view>
+<view class="refreshContain2" bindtap="save2">
+  <text class="refreshText2">确定</text>
+</view>

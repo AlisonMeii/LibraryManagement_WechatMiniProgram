@@ -1,0 +1,93 @@
+<!--pages/firstPage/firstPage.wxml-->
+<!-- 轮播图 -->
+<view class="news1-container">
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true"  class="swiper" indicator-dots="true">
+    <block wx:for="{{swiperList.data}}" >        
+       <swiper-item>
+        <image class="logo"src="{{item.url}}" style="width:100%" mode="widthfit"></image>                  
+       </swiper-item>  
+    </block>     
+  </swiper>
+</view>
+<!-- 座位预约、书籍借阅、一键快速预约 -->
+<view class="contain">
+		<view class="forSeat" bindtap="getSeat">
+			<image class="imageSeat" src='../img/Seat.png' style="position:absolute;width: 80rpx; height: 80rpx;"></image>
+			<text class="Seat">座位预约</text>			
+		</view>
+     <!-- 分割线 -->
+  		<view class="divLine"></view>	
+		<view class="forBook">
+			<image class="imageBook" src='../img/Book.png' style="position:absolute;width: 90rpx; height: 90rpx;"></image>
+			<text class="Book">书籍借阅</text>
+		</view>
+		<!-- 分割线 -->
+		<view class="view_fengexian">
+			<view ></view>
+		</view>
+			<view>
+				<view class="quick"  bindtap="getSeatQuick" >一键快速预约</view>
+				<image class="imagequick" src='../img/quick.png' style="position:absolute;width: 90rpx; height: 90rpx;"></image>
+		</view>
+</view>
+
+<!-- 底部bar -->
+<view class="box">
+	<view class="cu-bar tabbar  shadow foot">
+		<view class="action {{selected == 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+			<view class="cuIcon-discover"></view> 首页
+		</view>
+		<view class="action add-action {{selected == 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
+			<button class="cu-btn cuIcon-friendadd bg-cyan"></button>添加
+		</view>
+		<view class="action {{selected == 2 ? 'active' : 'default'}}" data-index="2" bindtap="switchTab">
+			<view class="cuIcon-my">
+			</view>
+			我的
+		</view>
+	</view>
+</view>
+
+<!-- 个人信息 -->
+<view class="PersonInfoContainer">
+	<image  class="avatarurl" src="{{ avatarUrl}}"></image>
+  <text class="nickname">Hi，{{nickName}}</text>	
+	<text class="time">累计在馆时长: {{allTime}} h</text>	
+	
+  <view class="tag">
+		<text class="major">{{major}}</text>
+	</view>
+</view>
+<!-- 进度条 -->
+<!-- 需要添加数据 -->
+<view>
+	<view class="progress-box">
+		<progress percent="{{allTime}}" border-radius='10' stroke-width="10" activeColor='#6699CC'/>
+	</view>
+	<text class="percent">{{allTime}}/50</text>
+</view>
+
+<!-- 校内资源、悦读沙龙、分区介绍 -->
+<view class="buttons">
+	<view>
+		<image class="shoolThings" src="../img/shoolThings.png" style="width: 200rpx; height: 200rpx;"></image>
+		<text class="shoolText">校内资源</text>
+	</view>
+	<view>
+		<image class="readingimg1" src="../img/readingSalon.png" style="width: 200rpx; height: 220rpx;"></image>
+		<text class="readingText1">阅读沙龙</text>
+	</view>
+	<view>
+		<image class="readingimg2" src="../img/area.png" style="width: 195rpx; height: 185rpx;"></image>
+		<text class="readingText2">分区介绍</text>
+	</view>
+</view>
+
+<!-- 最新图书 -->
+<view class="newBook">
+	<view class="cu-bar bg-white solid-bottom">
+		<view class="action">
+			<text class="cuIcon-titles text-blue"></text> 最新图书
+		</view>
+	</view>
+</view>

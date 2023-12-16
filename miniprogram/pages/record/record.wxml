@@ -1,0 +1,78 @@
+<!--pages/record/record.wxml-->
+<view class="flex nav">
+  	<view class="nav-item  {{current==index?'text-selected current':''}}" 
+    wx:for="{{tabs}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+  		{{item}}
+  	</view>   
+		<view hidden="{{current!==0}}">
+			<view class = "now">
+
+			</view>
+		</view>
+</view>
+
+<view hidden="{{current!== 0}}" class="contain">
+	<block wx:for="{{now}}">
+			<view class = "before">
+					<text class="labNameText">沙河校区图书馆</text>
+					<text class="seatText">座位信息: {{seatIDNow}} </text>
+					<text class="lightText">当前光照条件：{{seatLight}}</text>
+					<text class="timeLeftTime">预约时间：{{startTimeNow}}</text>
+					<image class="picture" src="../img/yuyue.png"></image>
+					<view class="getSeat">
+						<text class="getSeatText">暂离占座</text>
+						<view class="slid"></view>
+					</view>
+					<text class="timeLimit">（2h以内才行哦）</text>
+			</view>
+			<view class="seatGetContain">
+				<view class="seatGetText">占座小卡</view>
+					<view class="timeContain">
+						<image class="timeImage" src="../img/calendar.png"></image>
+						<view class="timeText1">{{date}}</view>
+					</view>
+					<view class="timeContain2" bindtap="chooseTime">
+						<image class="timeImage2" src="../img/time.png"></image>
+						<view class="timeText2">
+							<picker mode="time" value="{{time}}" start="{{date}}" end="22:00" bindchange="bindDateChange">  
+										<view class="picker">  
+											{{time}}  
+										</view>  
+								</picker> 
+								-
+								<picker mode="time" value="{{time}}" start="{{date2}}" end="22:00" bindchange="bindDateChange2">  
+								<view class="picker">  
+									{{timeEnd}}  
+								</view>  
+							</picker> 
+						</view>  
+					</view>
+					<text class="reason">离开事由</text>
+			</view>
+			<view class="reasonContain">
+					<input class="reasonIn"  bindinput="getReason"></input>
+			</view>
+			<view class="send">
+				<view class="sendText" bindtap="send">提交</view>
+			</view>
+		</block>
+</view>
+
+<block  wx:for="{{history}}">
+<view hidden="{{current!== 1}}" class="historyContain">
+	<view class="eachContain">
+		<text class="seatID">座位信息:{{item.seatID}}</text>
+		<text class="seatDate">预约日期：{{item.oppTime}}</text>
+		<text class="seatTime">使用时段：{{item.arriveTime}}-{{item.endTime}}</text>
+		<view class="seecomment">
+				<text class="seecommentText">查看评价</text>
+		</view>
+	</view>
+
+</view>
+</block>
+
+
+
+
+

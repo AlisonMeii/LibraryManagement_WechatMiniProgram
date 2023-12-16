@@ -1,0 +1,110 @@
+<!--pages/getSeat/getSeat.wxml-->
+<view class="content">
+	<image class='background' src="../img/background.png" mode="aspectFill"></image>
+</view>
+<view class="gray"></view>
+
+<view class="container">
+
+</view>
+
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <!-- <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx);width:550rpx" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain"> -->
+  <view wx:for="{{list}}">
+    <!-- <view hidden="{{MainCur !== 0}}"> -->
+      <view class="seatContain">
+        <view class="seat">
+          <view class="seatText">点击放大选座</view>
+          <view class="now">
+            <view class="nowText">舒适</view>
+          </view>
+          <view class="useageText">座位使用率：</view>
+          <view class="useageText2">35%</view>
+          <view class="bookOnText">当前占座率：</view>
+          <view class="bookOnText2">15%</view>
+          <view class="freeText">空闲座位占比：</view>
+          <view class="freeText2">50%</view>
+        </view>
+      </view>
+      <view class="where">
+          <view class="cu-bar bg-white solid-bottom">
+            <view class="action">
+              <text class="cuIcon-titles text-blue"></text> 当前选中座位：
+            </view>		
+        </view>
+      </view>
+      <view class="calenderContainer" bindtap="showRule">
+        <image class="calenderImage" src="../img/calendar.png"></image>
+        <view class="calenderChoose">{{cur_year}}-{{cur_month}}-{{todayIndex+1}}</view>
+      </view>
+      <view class="timeContainer">
+        <image class="timeImage" src="../img/time.png"></image>
+      </view>
+    </view>
+    <view class="introduction">
+      <image class="lightImage" src="../img/light.png"></image>
+      <text class="lightText">当前光照情况：</text>
+      <image class="scoreImage" src="../img/score.png"></image>
+      <text class="scoreText">座位综合评分：</text>
+    </view>
+  <!-- </view> -->
+  <!-- </scroll-view> -->
+</view>
+
+
+<!-- 饼状图 -->
+<view class="container">
+  <canvas style="width:700rpx;height:700rpx;margin-top:-20rpx;margin-left:-80rpx" canvas-id="pieCanvas" id="pieCanvas" bindtouchstart="touchStart"></canvas>
+  <view hidden="{{judge !== 0}}">空闲座位  </view>
+  <view hidden="{{judge !== 1}}">使用座位  </view>
+  <view hidden="{{judge !== 2}}">占座  </view>
+  <!-- 添加数据 -->
+  <view class="library">
+    <text class="libName">当前沙河校区图书馆</text>
+    <text class="usePre">座位使用率: </text>
+    <text class="haveThings">占座率: </text>
+    <text class="freeSeat">空闲座位占比: </text>
+  </view>
+    <!-- 当月座位红黑榜 -->
+    <view class="list">
+      <image class="listImage" src="../img/ranking.png"></image>
+      <view class="listText">当月座位红黑榜</view>
+    </view>
+     <!-- 当前推荐 -->
+     <view class="recommend">
+      <view class="recommendText">当前推荐： </view>
+    </view>
+</view>
+
+<!-- 小组件编写 -->
+<!-- 弹出日历 -->
+<view class="canlendarBgView {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+  <view class="canlendarView">
+    <view class="canlendarTopView">
+      <view class="leftBgView" bindtap="handleCalendar" data-handle="prev">
+        <view class="leftView">《</view>
+      </view>
+      <view class="centerView">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+      <view class="rightBgView" bindtap="handleCalendar" data-handle="next">
+        <view class="rightView">》</view>
+      </view>
+    </view>
+    <view class="weekBgView">
+      <view class="weekView" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+    </view>
+    <view class="dateBgView">
+      <view wx:if="{{hasEmptyGrid}}" class="dateEmptyView" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+      </view>
+      <view class="dateView" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction">
+        <view class="datesView {{index == todayIndex ? 'dateSelectView' : ''}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <view bindtap="hideRule" class="makeSure">确定</view>
+</view>
+

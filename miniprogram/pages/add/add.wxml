@@ -1,0 +1,17 @@
+<!--pages/add/add.wxml-->
+<text>pages/add/add.wxml</text>
+<view class="box">
+	<view class="cu-bar tabbar  shadow foot">
+		<view class="action {{selected == 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+			<view class="cuIcon-discover"></view> 首页
+		</view>
+		<view class="action add-action {{selected == 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
+			<button class="cu-btn cuIcon-friendadd bg-cyan"></button>添加
+		</view>
+		<view class="action {{selected == 2 ? 'active' : 'default'}}" data-index="2" bindtap="switchTab">
+			<view class="cuIcon-my">
+			</view>
+			我的
+		</view>
+	</view>
+</view>

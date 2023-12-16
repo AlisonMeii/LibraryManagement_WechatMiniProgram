@@ -1,0 +1,255 @@
+/* pages/record/record.wxss */
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+page {
+  background: #f2f2f2;
+}
+
+/* 设置导航外层样式，绝对定位设置为fixed。z-index: 999999; 能够将 nav 布局层级结果放在最上层，避免被下层view遮挡*/
+.nav {
+  position: fixed;
+  background: white;
+  color: #353535;
+  z-index: 999999;
+  max-height: 100rpx;
+  width: 100%;
+}
+
+/* 设置为水平布局，文字居中显示 */
+.flex {
+  display: flex;
+  text-align: center;
+}
+/* 设置选中项的底部边框 */
+.nav .nav-item.current {
+ 
+  border-bottom: 10rpx solid;
+  width: 200rpx;
+  
+}
+
+/* 设置选中项的文字颜色和大小 */
+.text-selected {
+  color: #6699CC;
+  font-size: 34rpx;
+}
+
+/* 设置各项的高度、边距，同时设置flex=1，表示各项平分 */
+.nav .nav-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 100rpx;
+  padding: 0 20rpx;
+  flex: 1;
+}
+
+.before{
+  position:absolute;
+  margin-top: 120rpx;
+  width: 100%;
+  height: 1300rpx;
+  background: white;
+}
+.picture{
+  margin-left: 400rpx;
+  margin-top: 30rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+.labNameText{
+  position:absolute;
+  margin-top: 30rpx;
+  margin-left: 60rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.seatText{
+  position:absolute;
+  margin-top: 100rpx;
+  margin-left: 65rpx;
+  font-size: 32rpx;
+}
+.lightText{
+  position:absolute;
+  margin-top: 160rpx;
+  margin-left: 65rpx;
+  font-size: 32rpx;
+}
+.timeLeftTime{
+  position:absolute;
+  margin-top: 220rpx;
+  margin-left: 65rpx;
+  font-size: 32rpx;
+}
+.seatGetContain{
+  position:absolute;
+  width: 90%;
+  height: 700rpx;
+  margin-top: 550rpx;
+  margin-left: 35rpx;
+  border-radius: 40rpx;
+  background:#d7eaff;
+  box-shadow: 5rpx 5rpx 5rpx gray;
+}
+.seatGetText{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #6699CC;
+  margin-top: 30rpx;
+  margin-left: 260rpx;
+}
+.timeContain{
+  position: absolute;
+  margin-top: 30rpx;
+  width: 100%;
+  height:80rpx;
+  background:rgb(218, 246, 255);
+}
+.timeImage{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.timeText1{
+  margin-top: -40rpx;
+  margin-left: 250rpx;
+}
+.timeContain2{
+  position: absolute;
+  margin-top: 110rpx;
+  width: 100%;
+  height:80rpx;
+  background:#b2d6fa;
+}
+.timeImage2{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.timeText2{
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgb(0, 0, 0);
+  margin-top: -70rpx;
+  margin-left: -55rpx;
+}
+.reason{
+  position: relative;
+  font-size: 35rpx;
+  color: #4179b1;
+  top: 205rpx;
+  left:20rpx;
+}
+.reasonContain{
+  position:absolute;
+  width: 85%;
+  height: 220rpx;
+  background: white;
+  margin-top: 900rpx;
+  margin-left: 50rpx;
+  border-radius: 40rpx;
+}
+.reasonIn{
+  position:absolute;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  width: 90%;
+  font-size: 35rpx;
+}
+.send{
+  position:absolute;
+  width: 70%;
+  height: 70rpx;
+  background: #6699CC;
+  margin-top: 1140rpx;
+  margin-left: 100rpx;
+  /* border-radius: 20rpx; */
+}
+.sendText{
+  position:absolute;
+  font-size: 35rpx;
+  color: white;
+  margin-top: 10rpx;
+  margin-left: 210rpx;
+}
+.getSeat{
+  position:absolute;
+  background: #6699CC;
+  width: 300rpx;
+  height: 70rpx;
+  border-radius: 20rpx;
+  margin-top: -10rpx;
+  margin-left: 60rpx;
+}
+.slid{
+  position:absolute;
+  width: 140rpx;
+  height: 50rpx;
+  background:white;
+  border-radius: 15rpx;
+  margin-top: 10rpx;
+  margin-left: 150rpx;
+}
+.getSeatText{
+  position:absolute;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+.timeLimit{
+  position: relative;
+  color: #7998b8;
+  top: 15rpx;
+  left: 370rpx;
+}
+
+/* 历史预约记录 */
+.historyContain{
+  position: relative;
+  top: 100rpx;
+}
+.eachContain{
+  position: relative;
+  background: white;
+  width: 100%;
+  height:300rpx;
+  margin-top: 30rpx;
+}
+.seatID{
+  position: absolute;
+  margin-top:40rpx;
+  margin-left: 50rpx;
+}
+.seatDate{
+  position: absolute;
+  margin-top:100rpx;
+  margin-left: 50rpx;
+}
+.seatTime{
+  position: absolute;
+  margin-top:160rpx;
+  margin-left: 50rpx;
+}
+.seecomment{
+  position: relative;
+  background-color:#a5d1f5;
+  width: 220rpx;
+  height:50rpx;
+  left:15px;
+  top:230rpx;
+  border-radius: 10rpx;
+}
+.seecommentText{
+  position: relative;
+  color:white;
+  top:7rpx;
+  left:45rpx;
+}

@@ -1,0 +1,76 @@
+<view class="page">
+ 
+ 
+ <!--顶部导航栏-->
+  
+ <view class="swiper-tab">
+  
+ <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">当前预约</view>
+  
+ <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">历史预约</view>
+  
+
+  
+ </view>
+  
+  
+ <!--内容主体-->
+  
+ <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+  
+ <swiper-item style="position: absolute; left: 0rpx; top: 0rpx">
+  
+ <view class="card" >
+ <image class="cardpic" src="../img/bookcard.png" style="position: absolute; left: 366rpx; top: 40rpx; width: 365rpx; height: 330rpx; display: block; box-sizing: border-box"></image>
+ <text class="cardtext" style="position: absolute; left: 37rpx; top: 61rpx">沙河校区图书馆</text>
+ <text class="seatID" style="position: absolute; left: 37rpx; top: 143rpx">座位信息：{{seatID}}</text>
+ <text class="LightIntensity" style="position: absolute; left: 37rpx; top: 211rpx">当前光照条件：{{LightIntensity}}</text>
+ <text class="endTime" style="position: absolute; left: 37rpx; top: 281rpx">预约结束时间：{{endTime}}</text>
+ <text class="Type" style="position: absolute; left: 37rpx; top: 351rpx">当前状态：{{Type}}</text>
+<!--此处后期优化-->
+<view class="zhanzuocard" style="position: absolute; left: 37rpx; top: 455rpx">
+<text class="zhanzuocardtext" style="position: absolute; left: 249rpx; top: 22rpx">占座小卡</text>
+<view class="datecard" style="position: absolute; left: 0rpx; top: 100rpx">
+<text class="REDate" style="position: absolute; left: 258rpx; top: 28rpx">预约日期{{REDate}}</text><!--此处数据库缺少该类型--><!--或许我不会把date单独表示出来-->
+<image class="carddate" src="../img/carddate.png" style="width: 73rpx; height: 69rpx; display: inline-block; box-sizing: border-box; left: 15rpx; top: 16rpx; position: absolute;"></image>
+</view>
+<view class="timecard" style="position: absolute; left: 0rpx; top: 196rpx">
+<text class="Arrivetime" style="position: absolute; left: 258rpx; top: 22rpx">返回时间</text>
+<image class="cradtme" src="../img/timecard.png" style="width: 70rpx; height: 69rpx; display: inline-block; box-sizing: border-box; left: 17rpx; top: 10rpx; position: absolute"></image>
+</view>
+<view class="leavetext" style="position: absolute; left: 20rpx; top: 319rpx">离开事由</view>
+<view class="zhanzuoreason" style="position: absolute; left: 0rpx; top: 390rpx">
+<input class="leavereason" style="position: absolute; left: 30rpx; top: 20rpx"></input>
+</view>
+<button class="leavesubmit" style="position: absolute; left: 163rpx; top: 709rpx">提交</button>
+</view>
+ 
+ </view>
+  
+ </swiper-item>
+  
+ <swiper-item>
+  
+ <view class="partone" style="position: absolute; left: 0rpx; top: 39rpx">
+ <text class="seatIDHistory">座位信息:{{seatID}}</text>
+ <text class="startTime">预约日期：{{startTime}}</text>
+ <text class="Starttime">预约时段：</text>
+ <button class="gotocomment" style="position: absolute">进入评价</button>
+ </view>
+
+ <view class="parttwo" style="position: absolute; left: 0rpx; top: 305rpx">
+  <text class="seatIDHistory">座位信息:{{seatID}}</text>
+ <text class="startTime">预约日期：{{startTime}}</text>
+ <text class="Starttime">预约时段：</text>
+ <button class="seecomment" style="position: absolute">查看评价</button>
+ <view class="pageend" style="position: absolute; ">-没有更多啦-</view>
+ <image class="endpic" src="../img/endpic.png" style="position: absolute; "></image>
+ </view>
+ 
+ </swiper-item>
+  
+ 
+  
+ </swiper>
+  
+ </view>

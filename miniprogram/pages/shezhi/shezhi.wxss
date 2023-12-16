@@ -1,0 +1,22 @@
+/* pages/shezhi/shezhi.wxss */
+@import "../colorui/main.wxss";
+@import "../colorui/icon.wxss";
+Page{
+  background-color: rgb(245, 241, 241);
+}
+.list{
+  position: absolute;
+  width: 91%;
+  left:30rpx;
+  border: 3rpx gray;
+  top:40rpx;
+  margin-bottom: 120rpx;
+}
+.buttonBack{
+  border-radius: 50%;
+  height: 100rpx;
+  width: 100rpx;
+  margin-top:850rpx;
+  margin-left: 300rpx;
+  background: rgb(46, 145, 238);
+}
